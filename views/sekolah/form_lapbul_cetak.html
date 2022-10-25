@@ -1,0 +1,387 @@
+<?php defined('BASEPATH') OR exit('No direct script access allowed');?>
+<style>
+.content-wrapper {
+	padding-top : 0px !important;
+}
+</style>
+<section class="content">
+    <h4 style="margin-top : 0px;">LAPORAN BULANAN UNTUK BULAN <?=strtoupper(xbulan($query->bulan));?> <?=$this->session->tahun;?></h4>
+	<div class="nav-tabs-custom">
+		<div class="tab-content">
+			<div class="tab-pane active" id="form_1">				
+				<table width="100%" border="2px">
+					<tr>
+						<td width="20" style="border-right: solid 1px #FFF;"><strong>I.</strong></td>
+						<td><strong>PENERIMAAN MURID KELAS 1 TAHUN PELAJARAN <?=$query->ta;?></strong></td>
+					</tr>
+				</table>
+				<table width="100%" border="2px">					
+					<tr>
+						<td align="center">Rencana Penerimaan Murid Kelas 1</td>
+						<td align="center">Calon yang mendaftar kelas 1</td>
+						<td align="center">Murid yang diterima di kelas 1</td>
+					</tr>
+					<tr>
+						<td align="center">form1_1</td>
+						<td align="center">form1_2</td>
+						<td align="center">form1_3</td>
+					</tr>
+				</table>
+				<br>				
+				<table width="100%" border="2px">
+					<tr>
+						<td width="20" style="border-right: solid 1px #FFF;"><strong>II.</strong></td>
+						<td><strong>ASAL MURID KELAS 1 BARU TAHUN PELAJARAN <?=$query->ta;?></strong></td>
+					</tr>
+				</table>
+				<table width="100%" border="2px">
+					<tr>
+						<td align="center" colspan="3">Asal Murid Kelas 1 Dari Proses Penerimaan Murid Baru</td>
+						<td align="center" rowspan="2">Yang Mengulang</td>
+						<td align="center"rowspan="2">Pindahan dari Sekolah Lain</td>
+						<td align="center"rowspan="2">Jumlah Murid Kelas 1</td>
+					</tr>
+					<tr>
+						<td align="center">Rumah Tangga</td>
+						<td align="center">TK</td>
+						<td align="center">Jumlah</td>
+					</tr>
+					<tr>
+						<td align="center">form2_1</td>
+						<td align="center">form2_2</td>
+						<td align="center">form2_6</td>
+						<td align="center">form2_3</td>
+						<td align="center">form2_4</td>
+						<td align="center">form2_5</td>
+					</tr>
+				</table>
+				<div id="error_form2" style="color:red;display:none"><i>Jumlah asal murid kelas 1 dari proses penerimaan murid baru tidak sama dengan jumlah murid yang diterima di kelas 1 !</i></div>
+				<div id="space_form2"><br></div>
+				<table width="100%" border="2px">
+					<tr>
+						<td width="20" style="border-right: solid 1px #FFF;"><strong>III.</strong></td>
+						<td><strong>KEADAAN MURID</strong></td>
+					</tr>
+				</table>
+				<div class="table-responsive">
+					<table width="100%" border="2px">
+						<tr>
+							<td align="center" rowspan="4">KETERANGAN</td>
+							<td colspan="15" align="center">Banyaknya Murid</td>
+						</tr>
+						<tr>
+							<td align="center" colspan="2">I</td>
+							<td align="center" colspan="2">II</td>
+							<td align="center" colspan="2">III</td>
+							<td align="center" colspan="2">IV</td>
+							<td align="center" colspan="2">V</td>
+							<td align="center" colspan="2">VI</td>
+							<td align="center" colspan="2">Jumlah</td>
+							<td align="center" rowspan="3">Jumlah Semua</td>
+						</tr>
+						<tr>
+							<td align="center" colspan="2">form3_1 KELAS</td>
+							<td align="center" colspan="2">form3_2 KELAS</td>
+							<td align="center" colspan="2">form3_3 KELAS</td>
+							<td align="center" colspan="2">form3_4 KELAS</td>
+							<td align="center" colspan="2">form3_5 KELAS</td>
+							<td align="center" colspan="2">form3_6 KELAS</td>
+							<td align="center" colspan="2">form3_7 KELAS</td>
+						</tr>
+						<tr>
+							<td align="center">L</td>
+							<td align="center">P</td>
+							<td align="center">L</td>
+							<td align="center">P</td>
+							<td align="center">L</td>
+							<td align="center">P</td>
+							<td align="center">L</td>
+							<td align="center">P</td>
+							<td align="center">L</td>
+							<td align="center">P</td>
+							<td align="center">L</td>
+							<td align="center">P</td>
+							<td align="center">L</td>
+							<td align="center">P</td>
+						</tr>
+						<tr>
+							<td align="center">Pada Akhir Bulan yang lalu</td>
+							<td align="center">form3_8</td>
+							<td align="center">form3_9</td>
+							<td align="center">form3_10</td>
+							<td align="center">form3_11</td>
+							<td align="center">form3_12</td>
+							<td align="center">form3_13</td>
+							<td align="center">form3_14</td>
+							<td align="center">form3_15</td>
+							<td align="center">form3_16</td>
+							<td align="center">form3_17</td>
+							<td align="center">form3_18</td>
+							<td align="center">form3_19</td>							
+							<td align="center">form3_20</td>
+							<td align="center">form3_21</td>
+							<td align="center">form3_22</td>
+						</tr>
+						<tr>
+							<td align="center">Keluar dalam bulan ini</td>
+							<td align="center">form3_23</td>
+							<td align="center">form3_24</td>
+							<td align="center">form3_25</td>
+							<td align="center">form3_26</td>
+							<td align="center">form3_27</td>
+							<td align="center">form3_28</td>
+							<td align="center">form3_29</td>
+							<td align="center">form3_30</td>
+							<td align="center">form3_31</td>
+							<td align="center">form3_32</td>
+							<td align="center">form3_33</td>
+							<td align="center">form3_34</td>							
+							<td align="center">form3_35</td>
+							<td align="center">form3_36</td>
+							<td align="center">form3_37</td>
+						</tr>
+						<tr>
+							<td align="center">Masuk dalam bulan ini</td>
+							<td align="center">form3_38</td>
+							<td align="center">form3_39</td>
+							<td align="center">form3_40</td>
+							<td align="center">form3_41</td>
+							<td align="center">form3_42</td>
+							<td align="center">form3_43</td>
+							<td align="center">form3_44</td>
+							<td align="center">form3_45</td>
+							<td align="center">form3_46</td>
+							<td align="center">form3_47</td>
+							<td align="center">form3_48</td>
+							<td align="center">form3_49</td>							
+							<td align="center">form3_50</td>
+							<td align="center">form3_51</td>
+							<td align="center">form3_52</td>
+						</tr>
+						<tr>
+							<td align="center" rowspan="2">Jumlah pada bulan ini</td>
+							<td align="center">form3_53</td>
+							<td align="center">form3_54</td>
+							<td align="center">form3_55</td>
+							<td align="center">form3_56</td>
+							<td align="center">form3_57</td>
+							<td align="center">form3_58</td>
+							<td align="center">form3_59</td>
+							<td align="center">form3_60</td>
+							<td align="center">form3_61</td>
+							<td align="center">form3_62</td>
+							<td align="center">form3_63</td>
+							<td align="center">form3_64</td>
+							<td align="center">form3_65</td>
+							<td align="center">form3_66</td>
+							<td align="center">form3_67</td>
+						</tr>
+						<tr>
+							<td align="center" colspan="2">form3_68</td>
+							<td align="center" colspan="2">form3_69</td>
+							<td align="center" colspan="2">form3_70</td>
+							<td align="center" colspan="2">form3_71</td>
+							<td align="center" colspan="2">form3_72</td>
+							<td align="center" colspan="2">form3_73</td>
+							<td align="center" colspan="2">form3_74</td>
+							<td align="center">form3_75</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+			<div class="tab-pane" id="form_2">
+				<table width="100%" border="2px">
+					<tr>
+						<td width="20" style="border-right: solid 1px #FFF;"><strong>A.</strong></td>
+						<td><strong>JUMLAH MURID MENURUT AGAMA</strong></td>
+					</tr>
+				</table>
+				<table width="100%" border="2px">
+					<tr>
+						<td align="center">Islam</td>
+						<td align="center">Protestan</td>
+						<td align="center">Katholik</td>
+						<td align="center">Hindu</td>
+						<td align="center">Budha</td>
+						<td align="center">Lain-lain</td>
+						<td align="center">Jumlah</td>
+					</tr>
+					<tr>
+						<td align="center">form4_1</td>
+						<td align="center">form4_2</td>
+						<td align="center">form4_3</td>
+						<td align="center">form4_4</td>
+						<td align="center">form4_5</td>
+						<td align="center">form4_6</td>
+						<td align="center">form4_7</td>
+					</tr>
+				</table>
+				<div id="error_form4" style="color:red;display:none"><i>Jumlah murid tidak sesuai dengan data pada table keadaan murid !</i></div>
+				<div id="space_form4"><br></div>
+				<table width="100%" border="2px">
+					<tr>
+						<td width="20" style="border-right: solid 1px #FFF;"><strong>B.</strong></td>
+						<td><strong>ABSEN MURID</strong></td>
+					</tr>
+				</table>
+				<table width="100%" border="2px">
+					<tr>
+						<td align="center">Sakit (%)</td>
+						<td align="center">Ijin (%)</td>
+						<td align="center">Alpa (%)</td>
+						<td align="center">Jumlah (%)</td>
+					</tr>
+					<tr>
+						<td align="center">form5_1</td>
+						<td align="center">form5_2</td>
+						<td align="center">form5_3</td>
+						<td align="center">form5_4</td>
+					</tr>
+				</table><br>
+				<table width="100%" border="2px">
+					<tr>
+						<td width="20" style="border-right: solid 1px #FFF;"><strong>C.</strong></td>
+						<td><strong>MURID KELUAR KARENA</strong></td>
+					</tr>
+				</table>
+				<table width="100%" border="2px">
+					<tr>
+						<td align="center">Pindah</td>
+						<td align="center">Meninggal</td>
+						<td align="center">Berhenti</td>
+						<td align="center">Jumlah</td>
+					</tr>
+					<tr>
+						<td align="center">form6_1</td>
+						<td align="center">form6_2</td>
+						<td align="center">form6_3</td>
+						<td align="center">form6_4</td>
+					</tr>
+				</table>
+				<table width="100%" border="2px">
+					<tr>
+						<td width="20" style="border-right: solid 1px #FFF;"><strong>D.</strong></td>
+						<td><strong>BANYAK RUANG KELAS</strong></td>
+					</tr>
+				</table>
+				<table width="100%" border="2px">
+					<tr>
+						<td align="center" colspan="4">Jumlah Berdasarkan Status Kepemilikan</td>
+						<td align="center" colspan="2">Ruang Kelas</td>						
+					</tr>
+					<tr>
+						<td align="center">Pemerintah</td>
+						<td align="center">Masyarakat</td>
+						<td align="center">Pinjam</td>
+						<td align="center">Sewa</td>
+						<td align="center">Jumlah</td>
+						<td align="center">Kurang</td>
+					</tr>
+					<tr>
+						<td align="center">form7_1</td>
+						<td align="center">form7_2</td>
+						<td align="center">form7_3</td>
+						<td align="center">form7_4</td>
+						<td align="center">form7_5</td>
+						<td align="center">form7_6</td>
+					</tr>
+				</table>				
+			</div>
+			<div class="tab-pane" id="form_3">
+				<table width="100%" border="2px">
+					<tr>
+						<td width="20" style="border-right: solid 1px #FFF;"><strong>E.</strong></td>
+						<td><strong>BANYAKNYA GURU</strong></td>
+						<td align="center">Jumlah = form9_1 Orang</td>
+						<td align="center">Kurang = form9_2 Orang</td>
+					</tr>
+				</table><br>
+				<table width="100%" border="2px">
+					<tr>
+						<td width="20" style="border-right: solid 1px #FFF;"><strong>F.</strong></td>
+						<td><strong>BANTUAN</strong></td>
+					</tr>
+				</table>
+				<table width="100%" border="2px">
+					<tr>
+						<td align="center">Pelaksanaan Pelajaran (Rp)</td>
+						<td align="center">Kesejahteraan Personil (Rp)</td>
+						<td align="center">Perbaikan Sarana (Rp)</td>
+						<td align="center">Lain-lain (Rp)</td>
+						<td align="center">Jumlah (Rp)</td>
+					</tr>
+					<tr>
+						<td align="center">form10_1</td>
+						<td align="center">form10_2</td>
+						<td align="center">form10_3</td>
+						<td align="center">form10_4</td>
+						<td align="center">form10_5</td>
+					</tr>
+				</table><br>
+				<table width="100%" border="2px">
+					<tr>
+						<td width="20" style="border-right: solid 1px #FFF;"><strong>G.</strong></td>
+						<td><strong>SEBAB-SEBAB MUTASI PEGAWAI</strong></td>
+					</tr>
+				</table>
+				<table width="100%" border="2px">
+					<tr>
+						<td align="center">Pensiun</td>
+						<td align="center">Meninggal Dunia</td>
+						<td align="center">Berhenti</td>
+						<td align="center">Pindah Keluar Provinsi</td>
+						<td align="center">Jumlah</td>
+					</tr>
+					<tr>
+						<td align="center"><input style="text-align:center;" size="1" autocomplete="off" name="form11_1" type="text" id="form11_1" onkeypress="return xisNumberx(event);" value="<?=$form11->form11_1;?>"></td>
+						<td align="center"><input style="text-align:center;" size="1" autocomplete="off" name="form11_2" type="text" id="form11_2" onkeypress="return xisNumberx(event);" value="<?=$form11->form11_2;?>"></td>
+						<td align="center"><input style="text-align:center;" size="1" autocomplete="off" name="form11_3" type="text" id="form11_3" onkeypress="return xisNumberx(event);" value="<?=$form11->form11_3;?>"></td>
+						<td align="center"><input style="text-align:center;" size="1" autocomplete="off" name="form11_4" type="text" id="form11_4" onkeypress="return xisNumberx(event);" value="<?=$form11->form11_4;?>"></td>
+						<td align="center"><input style="text-align:center;" size="1" autocomplete="off" name="form11_5" type="text" id="form11_5" value="<?=$form11->form11_1+$form11->form11_2+$form11->form11_3+$form11->form11_4;?>" disabled></td>
+					</tr>
+				</table><br>
+				<table width="100%" border="2px">
+					<tr>
+						<td width="20" style="border-right: solid 1px #FFF;"><strong>H.</strong></td>
+						<td><strong>KEADAAN GEDUNG</strong></td>
+					</tr>
+				</table>
+				<table width="100%" border="2px">
+					<tr>
+						<td align="center">Permanen</td>
+						<td align="center">Semi Permanen</td>
+						<td align="center">Darurat</td>
+						<td align="center">Jumlah</td>
+					</tr>
+					<tr>
+						<td align="center"><input style="text-align:center;" size="1" autocomplete="off" name="form12_1" type="text" id="form12_1" onkeypress="return xisNumberx(event);" value="<?=$form12->form12_1;?>"></td>
+						<td align="center"><input style="text-align:center;" size="1" autocomplete="off" name="form12_2" type="text" id="form12_2" onkeypress="return xisNumberx(event);" value="<?=$form12->form12_2;?>"></td>
+						<td align="center"><input style="text-align:center;" size="1" autocomplete="off" name="form12_3" type="text" id="form12_3" onkeypress="return xisNumberx(event);" value="<?=$form12->form12_3;?>"></td>
+						<td align="center"><input style="text-align:center;" size="1" autocomplete="off" name="form12_4" type="text" id="form12_4" value="<?=$form12->form12_1+$form12->form12_2+$form12->form12_3;?>" disabled></td>
+					</tr>
+				</table><br>
+				<table width="100%" border="2px">
+					<tr>
+						<td width="20" style="border-right: solid 1px #FFF;"><strong>I.</strong></td>
+						<td><strong>RUMAH DINAS</strong></td>
+					</tr>
+				</table>
+				<table width="100%" border="2px">
+					<tr>
+						<td align="center">Rumah Kepsek</td>
+						<td align="center">Rumah Guru</td>
+						<td align="center">Rumah Penjaga</td>
+						<td align="center">Jumlah</td>
+					</tr>
+					<tr>
+						<td align="center"><input style="text-align:center;" size="1" autocomplete="off" name="form13_1" type="text" id="form13_1" onkeypress="return xisNumberx(event);" value="<?=$form13->form13_1;?>"></td>
+						<td align="center"><input style="text-align:center;" size="1" autocomplete="off" name="form13_2" type="text" id="form13_2" onkeypress="return xisNumberx(event);" value="<?=$form13->form13_2;?>"></td>
+						<td align="center"><input style="text-align:center;" size="1" autocomplete="off" name="form13_3" type="text" id="form13_3" onkeypress="return xisNumberx(event);" value="<?=$form13->form13_3;?>"></td>
+						<td align="center"><input style="text-align:center;" size="1" autocomplete="off" name="form13_4" type="text" id="form13_4" value="<?=$form13->form13_1+$form13->form13_2+$form13->form13_3;?>" disabled></td>
+					</tr>
+				</table><br>
+			</div>
+		</div>
+		
+	</div>
+</section>
